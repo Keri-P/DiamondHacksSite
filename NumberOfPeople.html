@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <form name="myform" action="javascript:save()">
+            <label for = "numPpl">How many people are you ordering for?</label>
+            <input name="numPpl" id = "numPpl" type="number">
+            <input type="submit" value="Submit">
+        </form>
+
+    <p id = "secret">
+
+    </p>
+
+    <script>
+        var num1 = 0;
+        var pressedOnce = false;
+        function save() {
+            num1 = document.getElementById("numPpl").value;
+            console.log("working");
+        }
+        var i = 0;
+        
+        document.addEventListener('keydown', function(event){
+	        if(event.key === "Escape"){
+		        document.getElementById("secret").innerHTML = "How many people are in your household?";
+        }
+        });
+
+        let keysPressed = {};
+        document.addEventListener('keydown', (event) => {
+        keysPressed[event.key] = true;      
+
+        document.addEventListener('keyup', (event) => {
+            pressedOnce = true;
+        });
+
+        if (keysPressed['Escape'] && pressedOnce) {
+            document.getElementById("secret").innerHTML = "";
+        }
+        });
+
+    </script>
+
+    </body>
+      
+</html>
