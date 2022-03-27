@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html class = "pplBackground">
+<link rel = "stylesheet" href="design.css">
+
+<body>
+    <p>
+        The police are on their way to&nbsp; <p id = "add"></p>. There are&nbsp; <p id = "num"></p> people in the 
+        household.
+    </p>
+</body>
+
+<script src = "variables.js"></script>
+<script>
+    document.getElementById("add").innerHTML = sessionStorage.getItem("address");
+    document.getElementById("num").innerHTML = sessionStorage.getItem("num1");
+</script>
+
+</html>
