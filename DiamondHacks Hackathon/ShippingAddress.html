@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html class = "pplBackground">
+    <link rel = "stylesheet" href="design.css">
+    <a href="contact.html">Contact Us</a>
+    <body id = "center">
+        <form action="javascript:saveAddress()">
+            <label for="Address">Where would you like this delivered to?</label>
+            <input type="text" id="Address" name="Address">
+            <input type="submit" value="Submit">
+          </form> 
+
+        <p id = "secret">
+
+        </p>
+
+        <a href = "C:\Users\PK\Desktop\DiamondHacks Hackathon\FinalScreen.html"><button type="button">Next</button></a>
+    </body>
+
+    <script src = "variables.js"> </script>
+    <script>
+        
+
+        var pressedOnce = false;
+
+document.addEventListener('keydown', function(event){
+    if(event.key === "h"){
+        document.getElementById("secret").innerHTML = "Submitting an address will send the police to that location.";
+        document.addEventListener('keyup', (event) => {
+            pressedOnce = true;
+        });
+}
+});
+
+let keysPressed = {};
+document.addEventListener('keydown', (event) => {
+keysPressed[event.key] = true;      
+
+
+
+if (keysPressed['h'] && pressedOnce) {
+    document.getElementById("secret").innerHTML = "";
+}
+});
+
+    </script>
+</html>

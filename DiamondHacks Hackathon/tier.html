@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <!DOCTYPE html>
+<html lang="en" class = "pplBackground">
+    
+  <head>
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+
+    <title>Cake Website</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+  </head>
+
+  <body>
+    
+
+    <nav class="navbar">
+      <a href="contact.html">Contact Us</a>
+    </nav>
+
+    <form id = "tier">
+<div class ="tier">
+
+    <p id = "question1", class = "righttext"></p>
+
+    <label for="questionTier">How many tiers would you like your cake to have?</label><br>
+
+    <p id = "one", class = "righttext"></p>
+    
+<input type="radio" situation ="questionFlavor" value= "calm" id = "calm">1</label><br>
+
+    <p id = "two", class = "righttext"></p>
+
+<input type="radio" tier ="questionTier" value= "uncomfortable" id = "uncomfortable">2</label> <br>
+
+    <p id = "three", class = "righttext"></p>
+
+<input type="radio" tier ="questionTier" value= "want to leave" id = "want to leave">3</label><br>
+
+    <p id = "four", class = "righttext"></p>
+
+<input type="radio" tier ="questionTier" value= "send help" id = "send help">4</label><br>
+
+    <p id = "five", class = "righttext"></p>
+
+<input type="radio" tier ="questionTier" value= "immediate danger" id = "immediate danger">5</label><br>
+
+  </div>
+</form>
+
+<button type = "button" onclick = "javascript:setDanger()"> Submit </button>
+
+
+<script src ="variables.js" defer></script>
+<script>
+  var feeling;
+  function feelingFunction(){}
+</script>
+
+<script>
+            var pressedOnce = false;
+
+document.addEventListener('keydown', function(event){
+    if(event.key === "h"){
+        document.getElementById("question1").innerHTML = "How unsafe are you feeling?";
+        document.getElementById("one").innerHTML = "1: Calm";
+        document.getElementById("two").innerHTML = "2: Uncomfortable";
+        document.getElementById("three").innerHTML = "3: Want to leave";
+        document.getElementById("four").innerHTML = "4: Send help";
+        document.getElementById("five").innerHTML = "5: Immediate Danger";
+        document.addEventListener('keyup', (event) => {
+            pressedOnce = true;
+        });
+}
+});
+
+let keysPressed = {};
+document.addEventListener('keydown', (event) => {
+keysPressed[event.key] = true;      
+
+
+
+if (keysPressed['h'] && pressedOnce) {
+    document.getElementById("question1").innerHTML = "";
+    document.getElementById("one").innerHTML = "";
+    document.getElementById("two").innerHTML = "";
+    document.getElementById("three").innerHTML = "";
+    document.getElementById("four").innerHTML = "";
+    document.getElementById("five").innerHTML = "";
+}
+});
+</script>
+
+<scirpt src = "variables.js"></scirpt>
+
+</body>
+    <p>
+        <a href = "ShippingAddress.html"><button type="button">Next</button></a>
+    </p>
+</html>

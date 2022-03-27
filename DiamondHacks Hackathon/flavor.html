@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html class = "pplBackground">
+    <!DOCTYPE html>
+<html lang="en">
+    
+  <head>
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <title>Cake Website</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+  </head>
+
+  <script src = "variables.js" defer></script>
+
+  <body>
+    
+
+    <nav class="navbar">
+      <a href="contact.html">Contact Us</a>
+    </nav>
+
+<form id = "flavor" name = "flavor">
+  <div class ="flavor">
+
+    <p id = "question"></p>
+
+    <label for="questionFlavor">What flavor cake would you like?</label><br>
+
+    <p id = "Vanilla" class = "righttext">
+    </p>
+    
+<input type="radio" situation ="questionFlavor" value= "verbal abuse" id = "verbal abuse" name = "abuse_type">Vanilla</label><br>
+<img src="vanilla.jpg"><br>
+
+    <p id = "Chocolate" class = "righttext">
+    </p>
+
+<input type="radio" name ="questionFlavor" value= "physcial abuse" id = "physical abuse" name = "abuse_type">Chocolate</label><br>
+<img src="chocolate.jpg"><br>
+
+    <p id = "Strawberry" class = "righttext"></p>
+
+<input type="radio" name ="questionFlavor" value= "sexual abuse" id = "sexual abuse" name = "abuse_type">Strawberry</label><br>
+<img src="strawberry.jpg"><br>
+
+    <p id = "MixedFruit" class = "righttext"></p>
+
+<input type="radio" name ="questionFlavor" value= "toxic controlling" id = "toxic controlling" name = "abuse_type">Mixed Fruit</label><br>
+<img src="mixed fruit.jpg"><br>
+
+    <p id = "RedVelvet" class = "righttext"></p>
+
+<input type="radio" name ="questionFlavor" value= "general fear and danger" id = "general fear and danger" name = "abuse_type">Red Velvet</label><br>
+<img src="red velvet.jpg"><br>
+
+  </div>
+</form>
+
+<button type = "button" onclick = "javascript:setSituation()"> Submit </button>
+
+  <a href="NumberOfPeople.html">
+  <button type="button">Next</button>
+
+  </a>
+  <script>
+    var situation;
+    function situationFunction(){}
+</script>
+  
+    <link rel = "stylesheet" href="design.css">
+  <script>
+    var pressedOnce = false;
+
+document.addEventListener('keydown', function(event){
+    if(event.key === "h"){
+        document.getElementById("question").innerHTML = "What type of abuse are you facing?";
+        document.getElementById("Vanilla").innerHTML = "Vanilla: Verbal Abuse";
+        document.getElementById("Chocolate").innerHTML = "Chocolate: Physical Abuse";
+        document.getElementById("Strawberry").innerHTML = "Strawberry: Sexual Abuse";
+        document.getElementById("MixedFruit").innerHTML = "Mixed Fruit: Toxic Controlling";
+        document.getElementById("RedVelvet").innerHTML = "Red Velvet: General Fear and Danger";
+        document.addEventListener('keyup', (event) => {
+            pressedOnce = true;
+        });
+    }
+});
+
+let keysPressed = {};
+document.addEventListener('keydown', (event) => {
+keysPressed[event.key] = true;      
+
+
+
+if (keysPressed['h'] && pressedOnce) {
+    document.getElementById("question").innerHTML = "";
+    document.getElementById("Vanilla").innerHTML = "";
+    document.getElementById("Chocolate").innerHTML = "";
+    document.getElementById("Strawberry").innerHTML = "";
+    document.getElementById("MixedFruit").innerHTML = "";
+    document.getElementById("RedVelvet").innerHTML = "";
+}
+});
+  </script>
+
+ 
+
+  </body>
+
+</html>
