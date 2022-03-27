@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html class = "pplBackground">
+<link rel = "stylesheet" href="design.css">
+
+<body>
+    <p>
+        Type of situation: <p id = "sit"></p>
+        Number of people in the houshold: <p id = "num"></p>
+        Level of danger: <p id = "dan"></p>
+        The police are on their way to: <p id = "add"></p>
+    </p>
+</body>
+
+<script src = "variables.js"></script>
+<script>
+    document.getElementById("add").innerHTML = sessionStorage.getItem("address");
+    document.getElementById("num").innerHTML = sessionStorage.getItem("num1");
+    document.getElementById("sit").innerHTML = sessionStorage.getItem("situation");
+    document.getElementById("dan").innerHTML = sessionStorage.getItem("danger");
+</script>
+
+</html>
